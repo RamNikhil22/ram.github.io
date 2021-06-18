@@ -1,0 +1,44 @@
+
+var modhalu_anke=5;
+var interval_value1;
+var modhalu_viluva=0;
+
+
+
+
+
+var mamidi_anke=1;
+var anke=0;
+var sankhya=0;
+var sthanam
+var interval_value2;
+var lekka=0;
+var samayam=60;
+var nimishalu=1;
+var vadhilinavi=0;
+function ankelu_marchu(){
+
+	if(modhalu_anke>=1){
+modhalu_anke=modhalu_anke-1;
+document.getElementById("modhalu_ankelu").innerHTML=modhalu_anke;
+
+	}else{
+document.getElementById("modhalu_ankelu").style.display="none";
+window.clearInterval(interval_value1);
+modhalu_viluva=1;
+
+
+
+	}
+}
+function modhati_sthapa_sthapana(){
+value_var=1;
+var value_var=document.getElementById("loadfile_div").innerHTML;
+value_var=value_var.replace(/-0-/g,"<");
+value_var=value_var.replace(/-1-/g,">");
+value_var=value_var.replace(/__/g,"&&");
+setTimeout(value_var,100);
+value_var="";
+document.getElementById("loadfile_div").innerHTML="";
+document.getElementById("filename").src="maamidi_pattuko_script.php?ucode=fgh35egk";
+}

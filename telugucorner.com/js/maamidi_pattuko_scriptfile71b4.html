@@ -1,0 +1,68 @@
+
+// && butta_stanam.top<Math.floor(mamidi_stanam.top)
+var interval_value3;
+
+interval_value3=setInterval("polchu()",50);
+
+
+
+
+
+
+
+$("body").mousemove(function(e){
+if(modhalu_viluva){
+sthanam=e.clientX+"px";
+document.getElementById("butta").style.left=sthanam;
+document.getElementById("butta_mundhu").style.left=sthanam;
+
+}
+});
+
+
+$("#top_bar").css("opacity","0.50");
+interval_value2=setInterval("mamidi_ralu()",1000);
+function mamidi_ralu(){
+	if(modhalu_viluva){
+
+
+lekka++;
+mamidi_anke=Math.floor(Math.random()*11)+1;
+//alert("eeee");
+$("#mamidi"+mamidi_anke).animate({"top":"500px"},900,function (){check_catch()});
+samayam_lekka()
+}
+function check_catch(){
+$("#mamidi"+mamidi_anke).css("top","0px");
+	}
+}
+
+function samayam_lekka(){
+samayam--;
+if(samayam==0){
+samayam=60;
+nimishalu--;
+}
+
+$("#samayam").html("0"+nimishalu+":"+samayam);
+//samayam/60;
+
+if(nimishalu<0){
+
+window.clearInterval(interval_value2);
+window.clearInterval(interval_value3);
+vadhilinavi=lekka-anke;
+document.getElementById("samayam").innerHTML="00:00";
+setTimeout("phalithala_pette()",2000);
+}
+
+}
+function phalithala_pette(){
+modhalu_viluva=0;
+document.getElementById("phalithala_pette").style.display="block";
+document.getElementById("phalithala_pette").innerHTML='<div style="text-align:center; height:30px; padding:5px 0px 0px 0px; font-size:25px;">&#3078;&#3103; &#3077;&#3119;&#3135;&#3112;&#3110;&#3135;</div><div style="text-align:center;border-bottom:3px dashed #000000; color:#05a701;width:300px; margin:0px auto;">&#3115;&#3122;&#3135;&#3108;&#3134;&#3122;&#3137;</div><div style="overflow:hidden; padding:8px 0px 0px 0px;"><div class="line_class">&#3114;&#3103;&#3149;&#3103;&#3137;&#3093;&#3137;&#3112;&#3149;&#3112; &#3118;&#3134;&#3118;&#3135;&#3105;&#3135; &nbsp; </div><div>'+anke+'</div></div><div  style="overflow:hidden;"><div class="line_class">&#3125;&#3110;&#3135;&#3122;&#3135;&#3112;  &#3118;&#3134;&#3118;&#3135;&#3105;&#3135; &nbsp; </div><div>'+vadhilinavi+'</div></div><div  style="overflow:hidden;"><div class="line_class">&#3118;&#3146;&#3108;&#3149;&#3108;&#3074; &nbsp; </div><div>'+lekka+'</div></div><div  style="overflow:hidden; padding:7px 0px 0px 0px; text-align:center;"><input type="button" name="sare" value="&#3128;&#3120;&#3142;" class="button_class" onclick="sare();">  &nbsp; &nbsp; &nbsp; <input type="button" name="kotta aata" value="&#3093;&#3146;&#3108;&#3149;&#3108; &#3078;&#3103;" class="button_class" onclick="document.body.style.display=\'none\';  window.location.reload();"></div>';
+}
+function sare(){
+document.getElementById("phalithala_pette").style.display="none";
+}
+document.getElementById("filename_new").src="maamidi_pattuko_script.php?ucode=ke35egaf";
